@@ -1,0 +1,21 @@
+{
+  "name": "affinity-mortgage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "middleman server",
+    "build": "bundle exec middleman build"
+  },
+  "keywords": [],
+  "author": "Jon Wheeler",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-loader": "^6.4.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "webpack": "^2.2.1"
+  }
+}
