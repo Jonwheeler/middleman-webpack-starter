@@ -1,8 +1,11 @@
 const webpack = require('webpack');
+const ModernizrWebpackPlugin = require("modernizr-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: {
-    site: './source/javascripts/site.js'
+    site: './source/javascripts/site.js',
+    styles: './source/stylesheets/main.css'
   },
 
   output: {
@@ -19,10 +22,18 @@ module.exports = {
         query: {
           presets: ['es2015', 'stage-0']
         },
-      },
+      }, {
+        test: /\.(css|scss|sass)$/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: ["css-loader", "postcss-loader"]
+        })
+      }
     ] 
   },
   plugins: [
+    new ModernizrWebpackPlugin(),
+    new ExtractTextPlugin("main.css"),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
