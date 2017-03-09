@@ -1,7 +1,5 @@
-@import "./_variables";
-
 body {
-  background-color: $gold;
+  background-color: gold;
   color: #333;
   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
     "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
